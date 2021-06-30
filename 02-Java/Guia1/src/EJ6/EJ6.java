@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class EJ6 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String va
+       
         
         System.out.println("Ingrese un numero a calcular el doble triple y su raiz");
         
