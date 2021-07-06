@@ -1,4 +1,4 @@
-package EJ5;
+package EJ05;
 
 import java.util.Scanner;
 

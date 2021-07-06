@@ -18,8 +18,33 @@ public class EJ17 {
 
   
     public static void main(String[] args) {
-        Scanner leer = new Scanner(System.in);
+        String cadena;
+        int c=0,cGod=0,cBad=0;
         
+        Scanner leer = new Scanner(System.in);
+        String firstCh,lastCh;
+        do {            
+            System.out.println("ingrese la cadena numero:"+(c+1));
+            cadena=leer.nextLine();
+            firstCh =cadena.substring(0,1);
+            lastCh  =cadena.substring((cadena.length()-1),(cadena.length()));
+           /* System.out.println("firstch "+firstCh);
+            System.out.println("lastch "+lastCh);
+            System.out.println("firstCh.equals(X) "+ firstCh.equals("X"));
+            
+            System.out.println("(lastCh.equals(0) "+lastCh.equals("O"));*/
+            
+            if ((firstCh.equals("X")) && (lastCh.equals("O")) && (cadena.length()==5)){cGod++;}
+            else{cBad++;}
+            c++;
+        } while (!cadena.equals("&&&&&"));
+        
+         
+        
+        System.out.println("INFORME FINAL:");
+        System.out.println("CANTIDAD DE LECTURAS= "+(c-1));
+        System.out.println("LECTURAS CORRECTAS=   "+cGod);
+        System.out.println("LECTURAS INCORRECTAS= "+(cBad-1));
         
         
     }

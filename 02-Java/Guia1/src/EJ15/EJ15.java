@@ -22,7 +22,7 @@ public class EJ15 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int op;
-        char op2;
+        String op2;
         Integer num1, num2;
 
         System.out.println("Ingrese el numero 1");
@@ -40,7 +40,7 @@ public class EJ15 {
                     + "Elija opción:");
             op = input.nextByte();
             System.out.println(op);
-            op2='N';
+            op2="N";
             switch (op) {
                 case 1: 
                     System.out.println(num1+" + "+num2+" = "+(num1+num2));
@@ -60,13 +60,16 @@ public class EJ15 {
                     break;
                 case 5:
                     System.out.println("esta seguro que desea salir ??(S/N)");
-                    op2 =input.next().charAt(0);
+                    op2 =input.next();
+                    op2=op2.toLowerCase();
+                    
+                    
 
                     break;
                 default:
                     throw new AssertionError();
             }
-        }while (op != 5  && (op2 != 'S' || op2 != 's' ) );
+        }while ( op2.equals("n") || op != 5)  ;
 
     }
 
