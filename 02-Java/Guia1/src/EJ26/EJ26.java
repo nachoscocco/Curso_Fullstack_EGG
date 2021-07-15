@@ -49,6 +49,7 @@ public class EJ26  {
         return matrix;
     }
     
+    
     public  void muestraMatriz(Integer[][] matrix){
         Scanner leer = new Scanner(System.in);
         
@@ -63,7 +64,6 @@ public class EJ26  {
         
     
     }
-    
     public static Integer[][] transponeMatriz( Integer[][] matrix ){
        Integer[][] matrixT= new Integer[3][3];
         for (int i = 0; i <matrix.length; i++) {
