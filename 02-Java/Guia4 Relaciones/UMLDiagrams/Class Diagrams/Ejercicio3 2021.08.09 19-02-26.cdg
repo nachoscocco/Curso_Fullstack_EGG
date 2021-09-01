@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio3">
+  <ClassDiagramComponents>
+    <Class name="Carta" package="Entity" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="numeroCarta" type="int" visibility="private"/>
+        <Field name="paloCarta" type="Palo" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="numeroCarta"/>
+          <Argument type="Palo" name="paloCarta"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumeroCarta" returnType="int" visibility="public"/>
+        <Method name="setNumeroCarta" returnType="void" visibility="public">
+          <Argument type="int" name="numeroCarta"/>
+        </Method>
+        <Method name="getPaloCarta" returnType="Palo" visibility="public"/>
+        <Method name="setPaloCarta" returnType="void" visibility="public">
+          <Argument type="Palo" name="paloCarta"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Ejercicio3" package="Main" visibility="public" xPosition="779.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CartaServices" package="Services" visibility="public" xPosition="285.0" yPosition="320.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="cargarCartas" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Carta&gt;" name="baraja"/>
+        </Method>
+        <Method name="barajarCartas" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Carta&gt;" name="baraja"/>
+        </Method>
+        <Method name="mostrarCartas" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Carta&gt;" name="baraja"/>
+        </Method>
+        <Method name="mostrarCarta" returnType="void" visibility="public">
+          <Argument type="Carta" name="carta"/>
+        </Method>
+        <Method name="siguienteCarta" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Carta&gt;" name="baraja"/>
+          <Argument type="ArrayList&lt;Carta&gt;" name="descarte"/>
+        </Method>
+        <Method name="darCartas" returnType="void" visibility="public">
+          <Argument type="int" name="cantCartas"/>
+          <Argument type="ArrayList&lt;Carta&gt;" name="baraja"/>
+          <Argument type="ArrayList&lt;Carta&gt;" name="descarte"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Enum name="Palo" package="Entity" visibility="public" xPosition="554.0" yPosition="46.0">
+      <Literals>
+        <Literal name="ESPADA"/>
+        <Literal name="BASTO"/>
+        <Literal name="COPA"/>
+        <Literal name="ORO"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="Entity.Carta" target="Entity.Palo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="paloCarta" source="Entity.Carta" target="Entity.Palo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Services.CartaServices" target="Entity.Carta" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

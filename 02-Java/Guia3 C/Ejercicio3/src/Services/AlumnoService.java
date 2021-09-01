@@ -46,6 +46,11 @@ public class AlumnoService {
                 for (Integer nota : notas) {
                     notaFinal+=nota;
                 } 
+                
+                
+                
+                
+                
             }
         }
           
