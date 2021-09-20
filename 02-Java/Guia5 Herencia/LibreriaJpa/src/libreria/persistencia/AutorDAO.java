@@ -5,10 +5,12 @@
  */
 package libreria.persistencia;
 
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import libreria.entidades.Autor;
+import libreria.entidades.Editorial;
 
 
 /**
@@ -17,7 +19,7 @@ import libreria.entidades.Autor;
  */
 public class AutorDAO {
     
-    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("libreriaJpaPU");
+    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("LibreriaJpaPU");
     private final EntityManager em = emf.createEntityManager();
     
      public void guardarAutor(Autor autor) throws Exception { // Este metodo es para ingresar 
@@ -50,6 +52,13 @@ public class AutorDAO {
 
         return autor;
     }
+        
+         public List<Autor> listarAutores() throws Exception {
+        List<Autor> autores = em.createQuery("SELECT a FROM Autor a")
+                .getResultList();
+        return autores;
+          
+          }
         
     
 }

@@ -17,7 +17,7 @@ import libreria.entidades.Editorial;
  * @author nacho
  */
 public class EditorialDAO {
-    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("libreriaJpaPU");
+    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("LibreriaJpaPU");
     private final EntityManager em = emf.createEntityManager();
     
      public void guardarEditorial(Editorial editorial) throws Exception { // Este metodo es para ingresar 

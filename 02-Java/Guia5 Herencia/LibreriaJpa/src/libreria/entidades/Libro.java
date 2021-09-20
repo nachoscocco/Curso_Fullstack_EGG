@@ -17,7 +17,7 @@ import javax.persistence.ManyToOne;
 public class Libro {
     
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue
     private long isbn;
     
     private String titulo;

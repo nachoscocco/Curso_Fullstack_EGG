@@ -16,7 +16,7 @@ import javax.persistence.Persistence;
  * @author nacho
  */
 public class LibroDAO {
-    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("libreriaJpaPU");
+    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("LibreriaJpaPU");
     private final EntityManager em = emf.createEntityManager();
     
      public void guardarLibro(Libro libro) throws Exception { // Este metodo es para ingresar 
